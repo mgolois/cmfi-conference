@@ -1,0 +1,22 @@
+{
+    "bindings": [{
+            "authLevel": "anonymous",
+            "name": "req",
+            "type": "httpTrigger",
+            "direction": "in"
+        },
+        {
+            "name": "$return",
+            "type": "http",
+            "direction": "out"
+        },
+        {
+            "tableName": "Registrations",
+            "connection": "cmficonference_STORAGE",
+            "name": "tableBinding",
+            "type": "table",
+            "direction": "out"
+        }
+    ],
+    "disabled": false
+}
