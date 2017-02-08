@@ -2,12 +2,12 @@
 using SendGrid.Helpers.Mail;    
 using System.Net;
 
-public static async Task<string> Run(HttpRequestMessage req, out Mail message, TraceWriter log)
+public static string Run(HttpRequestMessage req, out Mail message, TraceWriter log)
 {
     log.Info("C# HTTP trigger function processed a request.");
 
     // Get request body
-    var contact = await req.Content.ReadAsAsync<ContactRequest>();
+    var contact = req.Content.ReadAsAsync<ContactRequest>().Result;
     
     var personalization = new Personalization();
     personalization.AddTo(new Email(contact.EmailAddress));
