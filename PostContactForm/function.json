@@ -11,11 +11,11 @@
             "direction": "out"
         },
         {
-            "tableName": "Registrations",
-            "connection": "cmficonference_STORAGE",
-            "name": "tableBinding",
-            "type": "table",
-            "direction": "out"
+            "type": "sendGrid",
+            "name": "message",
+            "direction": "out",
+            "from": "info@cmfimaryland.com",
+            "subject": "CMFI Conference Registration!"
         }
     ],
     "disabled": false
