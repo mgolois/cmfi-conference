@@ -54,7 +54,7 @@ $('#registration-form').submit(function(e) {
         dataType: 'json',
         success: function(data) {
 
-            $('#registration-msg .alert').html("Registration Successful. Thank you for registering");
+            $('#registration-msg .alert').html("Your registration was successfully submitted. Thank you for registering!");
             $('#registration-msg .alert').removeClass("alert-danger");
             $('#registration-msg .alert').addClass("alert-success");
             $('#registration-msg').show();
@@ -96,7 +96,7 @@ $("#contact-form").submit(function(e) {
         dataType: 'json',
         success: function(data) {
 
-            $('#contact-msg .alert').html("Registration Successful. Thank you for registering");
+            $('#contact-msg .alert').html("Thank you for contacting us. We will reply by email or phone shortly.");
             $('#contact-msg .alert').removeClass("alert-danger");
             $('#contact-msg .alert').addClass("alert-success");
             $('#contact-msg').show();
@@ -106,7 +106,7 @@ $("#contact-form").submit(function(e) {
         },
         error: function(error) {
             {
-                $('#contact-msg .alert').html("Sorry an error occurred while submitting your resgistration!");
+                $('#contact-msg .alert').html("Sorry, an error occurred while submitting your request!");
                 $('#contact-msg .alert').removeClass("alert-success");
                 $('#contact-msg .alert').addClass("alert-danger");
                 $('#contact-msg').show();
