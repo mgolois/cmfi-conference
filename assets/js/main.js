@@ -1,7 +1,7 @@
 /*
  * Change Navbar color while scrolling
  */
-
+var eventName = 'RevivalConference2017';
 $(window).scroll(function() {
     handleTopNavAnimation();
 });
@@ -30,7 +30,7 @@ $('#registration-form').submit(function(e) {
     e.preventDefault();
 
     var postForm = { //Fetch form data
-        'EventName': 'MenConferenceFeb2017',
+        'EventName': eventName,
         'FirstName': $('#registration-form #firstName').val(),
         'LastName': $('#registration-form #lastName').val(),
         'EmailAddress': $('#registration-form #email').val(),
@@ -43,7 +43,8 @@ $('#registration-form').submit(function(e) {
         'Country': $('#registration-form #country').val(),
         'Transportation': $('#registration-form #transportation').val(),
         'ChurchName': $('#registration-form #churchName').val(),
-        'Comments': $('#registration-form #comment').val()
+        'Comments': $('#registration-form #comment').val(),
+        'Sessions': $('#registration-form input[name=sessions]').val(),
     };
 
     $.ajax({
@@ -80,7 +81,7 @@ $("#contact-form").submit(function(e) {
     e.preventDefault();
 
     var postForm = { //Fetch form data
-        'EventName': 'MenConferenceFeb2017',
+        'EventName': eventName,
         'FirstName': $('#contact-form #firstName').val(),
         'LastName': $('#contact-form #lastName').val(),
         'EmailAddress': $('#contact-form #email').val(),
