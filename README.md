@@ -1,2 +1,2 @@
-# cmfi-mens-conference
-CMFI Westminster Men's Conference Website
+# CMFI Conference
+CMFI Westminster Conference Website
