@@ -1,7 +1,7 @@
 /*
  * Change Navbar color while scrolling
  */
-var eventName = 'RevivalConference2017';
+var eventName = 'RevivalConference2018';
 $(window).scroll(function() {
     handleTopNavAnimation();
 });
