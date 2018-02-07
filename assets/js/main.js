@@ -23,6 +23,25 @@ function handleTopNavAnimation() {
 /*
  * Registration Form
  */
+var RegistrationViewModel = function(){
+    self = this;
+    self.unitPrice = ko.observable(45.00);
+    self.quantity = ko.observable(1);
+    self.attendees = ko.observableArray([""]);
+    self.total = ko.pureComputed(function() {
+        var price = self.unitPrice() * self.quantity();
+        return price !== undefined ? "$"+price.toFixed(2) : "$0.00";
+    }, self);
+    
+    self.quantityChange = function(data,event){
+        self.attendees([]);
+        for(var i=0; i< self.quantity(); i++){
+            self.attendees.push("");
+        }
+    };
+}
+
+ko.applyBindings(new RegistrationViewModel());
 
 $('#registration-form').submit(function(e) {
 
